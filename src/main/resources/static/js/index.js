@@ -1,7 +1,7 @@
 window.onload = () => {
     document.getElementById("btnPedirDatos").onclick = () => {
 
-        let url = location.origin + "/api/pedirdatos";
+        let url = location.origin + "/api/pedirdatos?dat=34&texto=hola";
         fetch(url)
             .then(datos => datos.json())
             .then(datos => {
