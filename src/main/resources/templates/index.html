@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Pagina Index</h1>
+<form action="" method="post">
+    <input type="text" name="nombre" id="" placeholder="nombre">
+    <input type="password" name="password" id="" placeholder="password">
+    <input type="submit" value="Enviar">
+</form>
+<div th:if="${msg}">
+    <p>Usuario o Contraseña incorrecto</p>
+</div>
+</body>
+</html>
