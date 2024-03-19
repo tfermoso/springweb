@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" th:href="@{/css/style.css}">
+    <script src="/js/index.js"></script>
 </head>
 <body>
-<img src="/img/ojo.jpg" alt="" srcset="">
+
 <h1>Pagina Index</h1>
 <form action="" method="post">
     <input type="text" name="nombre"  placeholder="nombre">
@@ -15,6 +16,8 @@
 </form>
 <div th:if="${msg}">
     <p>Usuario o Contraseña incorrecto</p>
+    <img th:src="@{/img/ojo.jpg}" alt="Ojo" >
 </div>
+<button id="btnPedirDatos">Pedir Datos</button>
 </body>
 </html>
