@@ -13,4 +13,14 @@ window.onload = () => {
                 }
             })
     }
+
+    document.getElementById("btnEnviarAlumno").onclick=()=>{
+        let alumno={
+            id:document.getElementById("idalumno").value,
+            nombre:document.getElementById("nombre").value,
+            apellidos:document.getElementById("apellidos").value,
+            edad:document.getElementById("edad").value
+        }
+
+    }
 }

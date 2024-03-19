@@ -13,11 +13,11 @@ import java.util.List;
 public class ApiController {
 
     @GetMapping("/pedirdatos")
-    public List<String> prueba(@RequestParam Integer dat,@RequestParam String texto){
+    public List<String> prueba(@RequestParam(name = "dat") Integer dat1,@RequestParam String texto){
         List<String> datos=new ArrayList<>();
         datos.add("hola mundo");
         datos.add("adios mundo");
-        datos.add("Valor "+dat);
+        datos.add("Valor "+dat1);
         datos.add("Texto "+texto);
         return datos;
     }
