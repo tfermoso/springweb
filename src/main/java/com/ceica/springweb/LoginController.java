@@ -1,4 +1,6 @@
 package com.ceica.springweb;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,9 +16,9 @@ public class LoginController {
 
     @PostMapping("/login")
     public String processLogin(@RequestParam String username, @RequestParam String password) {
-        // Aquí puedes manejar la lógica de autenticación
-        // Por ejemplo, puedes autenticar al usuario utilizando Spring Security
-        // Después de la autenticación, puedes redirigir al usuario a una página de inicio o a otra página según sea necesario
-        return "redirect:/home";
+        // Dentro de tu método processLogin en el LoginController
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        authentication.setAuthenticated(true);
+        return "redirect:/";
     }
 }
