@@ -1,12 +1,10 @@
 package com.ceica.springweb;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.SimpleTimeZone;
 
 @RestController
 @RequestMapping("/api")
@@ -20,5 +18,11 @@ public class ApiController {
         datos.add("Valor "+dat1);
         datos.add("Texto "+texto);
         return datos;
+    }
+    @PostMapping("/alumno")
+    public Alumno crearAlumno(@RequestBody Alumno alumno){
+        System.out.println(alumno.toString());
+        alumno.setNombre("Alumno cambiado");
+        return alumno;
     }
 }
